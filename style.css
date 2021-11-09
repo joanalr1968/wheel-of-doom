@@ -14,9 +14,14 @@ h1 {
 	text-align: center;
 }
 
+.buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
 .content {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
 .list {
@@ -31,4 +36,6 @@ h1 {
 
 .image img {
 	width: 100%; /*tiene ancho de 100% de su contenedor padre que tiene class="image"*/
+	/*margin: 30px 0;*/
+	margin-top: 30px;
 }
