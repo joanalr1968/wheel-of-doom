@@ -1,133 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="main.js"></script>
 
 </head>
+
 <body>
-    <header>
-        <h1>
-        Wheel of doom
-        </h1>
-    </header>
-    <main class="container">
-            <div class="buttons">
-                <button>Elegir voluntaria</button>
-                <button>Reiniciar sesión</button>
-                <button>Crear grupos</button>
-                <form action="#">
-                    <label class="number-of-groups" for="select">№ de grupos</label>
-                    <select class="select" name="select">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                    </select>
-                </form>
-      
-            </div>
-            <h2 class="list-title">
-                Lista de coders
-            </h2>
-            <ul class="list">
-                <li class="coder">Sara
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Judith
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Helen
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Tamara
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Candy
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Laura Contreras
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Gabrielle
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Carmen
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Yuliya
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Anna Girona
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Desirée
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Sonia
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Joana
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Ana Casas
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Alisa
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Faby
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Valentina
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Laura Mayas
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Rosa
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Sandra
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Kristina
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Gràcia
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Alexia
-                   <button class="eliminar">Eliminar</button>
-                </li>
-                <li class="coder">Marisa
-                   <button class="eliminar">Eliminar</button>
-                </li>
-             </ul>
+	<header>
+		<h1>
+			Wheel of doom
+		</h1>
+	</header>
+	<main class="container">
+		<div class="buttons">
+			<button>Elegir voluntaria</button>
+			<button>Reiniciar sesión</button>
+			<button>Crear grupos</button>
+			<form class="form" action="#">
+				<label class="number-of-groups" for="select">№ de grupos</label>
+				<select class="select" name="select">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
 
-            <div class="image">
-                <img src="img/cats-dia.jpg" alt="gatos con pizarra">
-            </div>
-            
-            <div class="answer">              
-            </div>
-        
-        </div>
+		</div>
+		<div class="content">
+			<div class="list-content">
+				<h2 class="list-title">
+					Lista de coders
+				</h2>
+				<ul class="list">
+					<li class="coder">Sara</li>
+					<li class="coder">Judith</li>
+					<li class="coder">Helen</li>
+					<li class="coder">Tamara</li>
+					<li class="coder">Candy</li>
+					<li class="coder">Laura Contreras</li>
+					<li class="coder">Gabrielle</li>
+					<li class="coder">Carmen</li>
+					<li class="coder">Yuliya</li>
+					<li class="coder">Anna Girona</li>
+					<li class="coder">Desirée</li>
+					<li class="coder">Sonia</li>
+					<li class="coder">Joana</li>
+					<li class="coder">Ana Casas</li>
+					<li class="coder">Alisa</li>
+					<li class="coder">Faby</li>
+					<li class="coder">Valentina</li>
+					<li class="coder">Laura Mayas</li>
+					<li class="coder">Rosa</li>
+					<li class="coder">Sandra</li>
+					<li class="coder">Kristina</li>
+					<li class="coder">Gràcia</li>
+					<li class="coder">Alexia</li>
+					<li class="coder">Marisa</li>
+				</ul>
+			</div>
 
-    </main>
-    
+			<div class="image">
+				<img src="img/cats-dia.jpg" alt="gatos con pizarra">
+			</div>
+		</div>
+		<div class="answer">
+		</div>
+
+		<div></div>
+
+	</main>
+
 </body>
+
 </html>
