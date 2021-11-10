@@ -15,10 +15,17 @@ h1 {
 	text-align: center;
 }
 
-.buttons {
-	display: flex;
-	justify-content: space-around;
-	margin: 20px 0px;
+.mascara {
+	width: 25px;
+}
+
+
+
+.btn {
+	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
+	border-radius: 10px 50px;
+	border: 2px solid #721c20;
+
 }
 
 .content {
@@ -36,7 +43,7 @@ h1 {
 }
 
 .buttons button {
-	padding: 6px;
+	padding: 6px 13px; 
 	font-size: 17px;
 }
 
@@ -46,7 +53,10 @@ h1 {
 
 .select {
 	font-size: 16px;
-	padding: 4px 0 4px 4px;
+	padding: 8px 2px 8px 8px;
+	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
+	border-radius: 10px;
+	border: 2px solid #721c20;
 }
 
 .number-of-groups {
