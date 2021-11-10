@@ -4,11 +4,12 @@
 	padding: 0;
 	box-sizing: border-box; /*https://developer.mozilla.org/es/docs/Web/CSS/box-sizing*/
 }
+
 body {
 	background-color: #fff;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px;
-	margin: 30px;
+	margin: 13px 30px 10px;
 	background-image: url(/img/Fondo-gato.colores.png);
 }
 
@@ -16,77 +17,89 @@ h1 {
 	text-align: center;
 	text-transform: uppercase;
 	font-family: "Rubik Beastly", cursive;
-	font-size: 60px;
+	font-size: 55px;
 	font-weight: 400;
 	color: #c25b5e;
-	text-shadow: 1px 0 1px #000, 
-0 1px 1px #000, 
--1px 0 1px #000, 
-0 -1px 1px #000;
-
-
-}
-
-
-	
-
-
-
-
-.btn {
-	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
-	border-radius: 10px 50px;
-	border: 2px solid #721c20;
-
+	text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
 }
 
 .content {
 	margin-top: 30px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	gap: 30px;
+}
+
+.buttons-image-container {
+	/*ALL NEW*/
+	width: 70%; /*tiene ancho de 70% de su contenedor padre que tiene class="container"*/
+	padding: 10px 10px 5px;
+	border-radius: 10px;
+	border: 3px solid #721c20;
 }
 
 .buttons {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center; /*new*/
+	gap: 100px; /*new*/
 	align-items: center;
-	margin: 25px 0;
 }
 
 .buttons button {
-	padding: 6px 13px; 
+	padding: 6px 10px;
+	font-size: 17px;
+	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
+	border-radius: 10px; /*new*/ /*era:border-radius: 10px 50px;*/
+	border: 2px solid #721c20;
+}
+
+.btn.grupos {
+	padding: 6px 8px; /*new*/
+}
+
+.form label {
 	font-size: 17px;
 }
 
 .form {
-	font-size: 17px;
+	border-radius: 10px; /*new*/
+	border: 2px solid #721c20; /*new*/
+	padding: 4px 8px; /*new*/
+	background-color: #fff; /*new*/
 }
 
 .select {
-	font-size: 16px;
-	padding: 8px 2px 8px 8px;
-	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
+	font-size: 17px;
+	padding: 6px 1px 6px 6px;
 	border-radius: 10px;
 	border: 2px solid #721c20;
+	margin-right: 7px;
 }
 
 .number-of-groups {
-	margin-right: 5px;
+	margin-right: 7px;
 }
 
 .list-content {
-	width: 260px; /*tiene ancho de 20% de su contenedor padre que tiene class="content"*/
+	width: 30%; /*tiene ancho de 30% de su contenedor padre que tiene class="container"*/
 	background-color: #eb898e;
 	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
 	border-radius: 14px;
-	border: 2px solid #721c20;
-	padding: 12px;
-	margin-top: 10px;
+	border: 3px solid #721c20;
+	padding: 25px 30px 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.lists {
+	/*ALL NEW*/
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .list-title {
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+	align-self: center; /*new*/
 }
 
 .list {
@@ -94,26 +107,22 @@ h1 {
 	font-size: 18px;
 }
 
+.list.one {
+	/*NEW*/
+	margin-right: 8px;
+}
+
+.list.two {
+	/*NEW*/
+	margin-left: 8px;
+}
+
 .coder {
 	margin-bottom: 8px;
 }
 
-.coder li::before {
-	content: "";
-background: url("../img/juguete-de-gato.ico");
-}
-
-.coder:last-child 
-{
-	margin-bottom: 0px;
-}
-.image {
-	width: 70%; /*tiene ancho de 70% de su contenedor padre que tiene class="content"*/
-}
-
 .image img {
-	width: 100%; /*tiene ancho de 100% de su contenedor padre que tiene class="image"*/
-	/*margin: 30px 0;*/
+	width: 100%;
 }
 
 .ovillo {
