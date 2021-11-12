@@ -5,12 +5,13 @@ $(document).ready(function () {
 	let codersActive = coders;
 
 
-	/*$('#btn-reiniciar').on("click", function() { let name=coders; })*/
+	
 
 	/*----------------------------------------FUNCTION--ELEGIR-VOLUNTARIA---------------------------------------*/
 
 	function random() {
 
+        	
 		if (codersActive.length >= 1) {
 
 			let num = Math.floor(Math.random() * codersActive.length);
@@ -21,7 +22,7 @@ $(document).ready(function () {
 		}
 
 		else {
-			$('.answer').html("<p class='voluntaria'>Ya no quedan más voluntarias, pulsa botón de Reiniciar sesión'</p>");
+			$('.answer').html("<p class='voluntaria'>Para elegir una voluntaria pulsa el botón de Reiniciar sesión</p>");
 		}
 	};
 
