@@ -8,31 +8,29 @@ $(document).ready(function () {
         /*$('#btn-reiniciar').on("click", function() { let name=coders; })*/
 
         function random() {
-         let num = coders[Math.floor(Math.random() * coders.length)];
+        let num = coders[Math.floor(Math.random() * coders.length)];
          
         let name = coders[num];
 
-         $('.answer').html("<p class='voluntaria'>" + num + "</p>");
+        coders.splice(num,1);
+
+        $('.answer').html("<p class='voluntaria'>" + num + "</p>");
        
-    };
+        };
 
-
-     $('#btn-start').on("click", function () {
+        $('#btn-start').on("click", function () {
 
         random();
-
 		
-	})
+	    })
 
  });
 
-$(document).ready(function () {
+        $(document).ready(function () {
     
-    let listaNombres = ['Sara', 'Judith', 'Helen', 'Tamara', 'Candy', 'Laura Contreras', 'Gabrielle', 'Carmen', 'Yuliya', 'Anna Girona','Desirée', 'Sonia', 'Joana', 'Ana Casas', 'Alisa', 'Faby', 'Valentina', 'Laura Mayas', 'Rosa', 'Sandra', 'Kristina', 'Gràcia', 'Alexia', 'Marisa',];
+        let listaNombres = ['Sara', 'Judith', 'Helen', 'Tamara', 'Candy', 'Laura Contreras', 'Gabrielle', 'Carmen', 'Yuliya', 'Anna Girona','Desirée', 'Sonia', 'Joana', 'Ana Casas', 'Alisa', 'Faby', 'Valentina', 'Laura Mayas', 'Rosa', 'Sandra', 'Kristina', 'Gràcia', 'Alexia', 'Marisa',];
 
-	let listaNombresActive = listaNombres;
-
-
+        let listaNombresActive = listaNombres;
 
 /*-------------------------------------------FUNCTION----CREAR-GRUPOS---------------------------------------*/
 
@@ -53,7 +51,6 @@ $(document).ready(function () {
 			result.push(listaNombresActive.splice(0, Math.ceil(listaNombresActive.length / i)).join(', '));
 		}
 
-
 		$('.answer').append(`<p class="grupo">Grupo 1: ${result[0]}</p>`);
 		$('.answer').append(`<p class="grupo">Grupo 2: ${result[1]}</p>`);
 		$('.answer').append(`<p class="grupo">Grupo 3: ${result[2]}</p>`);
@@ -70,7 +67,6 @@ $(document).ready(function () {
 		$(".grupo:contains('" + undefined + "')").hide();
 	};
 /*-----------------------------------------CREAR-GRUPOS---------------------------------------------*/
-
 
 	$('#btn-grupos').on("click", function () {
 
