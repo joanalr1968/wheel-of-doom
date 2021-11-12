@@ -1,54 +1,57 @@
+$(document).ready(function () {
 
-$(document).ready(function () { 
-    let coders = ["Sara","Judith","Helen","Tamara","Candy","Laura Contreras","Gabrielle","Carmen","Yuliya","Anna Girona",
-                "Desirée","Sonia","Joana","Ana Casas","Alisa","Faby","Valentina","Laura Mayas","Rosa","Sandra","Kristina",
-                "Gràcia","Alexia","Marisa"];
-     
-             
-        /*$('#btn-reiniciar').on("click", function() { let name=coders; })*/
+	let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
-        function random() {
-        let num = coders[Math.floor(Math.random() * coders.length)];
-         
-        let name = coders[num];
+	let codersActive = coders;
 
-        coders.splice(num,1);
 
-        $('.answer').html("<p class='voluntaria'>" + num + "</p>");
-       
-        };
+	/*$('#btn-reiniciar').on("click", function() { let name=coders; })*/
 
-        $('#btn-start').on("click", function () {
+	/*----------------------------------------FUNCTION--ELEGIR-VOLUNTARIA---------------------------------------*/
 
-        random();
-		
-	    })
+	function random() {
 
- });
+		if (codersActive.length >= 1) {
 
-        $(document).ready(function () {
-    
-        let listaNombres = ['Sara', 'Judith', 'Helen', 'Tamara', 'Candy', 'Laura Contreras', 'Gabrielle', 'Carmen', 'Yuliya', 'Anna Girona','Desirée', 'Sonia', 'Joana', 'Ana Casas', 'Alisa', 'Faby', 'Valentina', 'Laura Mayas', 'Rosa', 'Sandra', 'Kristina', 'Gràcia', 'Alexia', 'Marisa',];
+			let num = Math.floor(Math.random() * codersActive.length);
+			let name = codersActive[num];
+			codersActive.splice(num, 1);
+			$('.answer').html("<p class='voluntaria'>" + name + "</p>");
+			$(".coder:contains('" + name + "')").hide();
+		}
 
-        let listaNombresActive = listaNombres;
+		else {
+			$('.answer').html("<p class='voluntaria'>Ya no quedan más voluntarias, pulsa botón de Reiniciar sesión'</p>");
+		}
+	};
 
-/*-------------------------------------------FUNCTION----CREAR-GRUPOS---------------------------------------*/
+	/*-------------------------------------------FUNCTION--REINICIAR---------------------------------------*/
+	function reiniciar() {
+
+		$(".voluntaria").remove();
+		$(".grupo").remove();
+		$(".coder").show();
+
+		codersActive = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+	};
+
+	/*-------------------------------------------FUNCTION----CREAR-GRUPOS---------------------------------------*/
 
 	function crearGrupos() {
 
-		listaNombresActive = ['Sara', 'Judith', 'Helen', 'Tamara', 'Candy', 'Laura Contreras', 'Gabrielle', 'Carmen', 'Yuliya', 'Anna Girona', 'Desirée', 'Sonia', 'Joana', 'Ana Casas', 'Alisa', 'Faby', 'Valentina', 'Laura Mayas', 'Rosa', 'Sandra', 'Kristina', 'Gràcia', 'Alexia', 'Marisa',];
+		codersActive = ['Sara', 'Judith', 'Helen', 'Tamara', 'Candy', 'Laura Contreras', 'Gabrielle', 'Carmen', 'Yuliya', 'Anna Girona', 'Desirée', 'Sonia', 'Joana', 'Ana Casas', 'Alisa', 'Faby', 'Valentina', 'Laura Mayas', 'Rosa', 'Sandra', 'Kristina', 'Gràcia', 'Alexia', 'Marisa',];
 
 		$(".voluntaria").remove();
 		$(".grupo").remove();
 		$(".coder").show();
 
 
-		listaNombresActive = listaNombresActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
+		codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
 
 		let parts = $('.select option:selected').text();
 		let result = [];
 		for (let i = parts; i > 0; i--) {
-			result.push(listaNombresActive.splice(0, Math.ceil(listaNombresActive.length / i)).join(', '));
+			result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
 		}
 
 		$('.answer').append(`<p class="grupo">Grupo 1: ${result[0]}</p>`);
@@ -66,12 +69,34 @@ $(document).ready(function () {
 
 		$(".grupo:contains('" + undefined + "')").hide();
 	};
-/*-----------------------------------------CREAR-GRUPOS---------------------------------------------*/
+
+
+
+
+	/*-----------------------------------------ElEGIR VOLUNTARIA---------------------------------------------*/
+
+	$('#btn-start').on("click", function () {
+
+		random();
+
+	})
+
+	/*-------------------------------------------REINICIAR---------------------------------------*/
+	$('#btn-reiniciar').on("click", function () {
+
+		reiniciar();
+
+	});
+
+	/*-----------------------------------------CREAR-GRUPOS---------------------------------------------*/
 
 	$('#btn-grupos').on("click", function () {
 
 		crearGrupos();
 
 	});
+
+
+
 })
 
