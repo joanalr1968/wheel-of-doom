@@ -22,12 +22,8 @@ $(document).ready(function () {
 		}
 
 		else {
-			$(".voluntaria").remove();
-			$(".grupo").remove();
-			$(".coder").show();
-
-			codersActive = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
-
+			reiniciar()
+		
 			//$('.answer').html("<p class='voluntaria'>Para elegir una voluntaria pulsa el botón de Reiniciar sesión</p>");
 		}
 	};

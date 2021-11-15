@@ -157,7 +157,7 @@ h1 {
 	color: #000;
 	text-align: center;
 	font-size: 50px;
-	border: #000 2px dotted;
+	/*border: #000 2px dotted;*/
 	padding: 10px;
 }
 
@@ -165,5 +165,5 @@ h1 {
 	font-size: 18px;
 	/*border: #000 2px dotted;
 	padding: 5px;
-	margin-bottom: 5px;
+	margin-bottom: 5px;*/
 }
