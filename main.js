@@ -23,6 +23,7 @@ $(document).ready(function () {
 
 		else {
 			reiniciar()
+			random()
 		
 			//$('.answer').html("<p class='voluntaria'>Para elegir una voluntaria pulsa el botón de Reiniciar sesión</p>");
 		}
