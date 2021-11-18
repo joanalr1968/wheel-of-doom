@@ -7,7 +7,7 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 15px;
+	font-size: 1rem;
 	margin: 13px 30px 10px;
 	background-image: url('Assets/fondo-gato-colores.png');
 }
@@ -16,7 +16,7 @@ h1 {
 	text-align: center;
 	text-transform: uppercase;
 	font-family: "Rubik Beastly", cursive;
-	font-size: 55px;
+	font-size: 3.67rem;
 	font-weight: 400;
 	color: #c25b5e;
 	text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
@@ -46,14 +46,14 @@ h1 {
 
 .buttons button {
 	padding: 6px 10px;
-	font-size: 17px;
+	font-size: 1.13rem;
 	background: linear-gradient(to right, #c25b5e, #eb898e, #e29899);
 	border-radius: 10px; /*new*/ /*era:border-radius: 10px 50px;*/
 	border: 2px solid #721c20;
 }
 
 .form label {
-	font-size: 17px;
+	font-size: 1.13rem;
 }
 
 .form {
@@ -64,7 +64,7 @@ h1 {
 }
 
 .select {
-	font-size: 17px;
+	font-size: 1.13rem;
 	padding: 5px 1px 5px 5px;
 	border-radius: 10px;
 	border: 2px solid #721c20;
@@ -99,7 +99,7 @@ h1 {
 
 .list {
 	list-style: none; /*elimina las bolitas en una lista desordenada (ul) HTML*/
-	font-size: 18px;
+	font-size: 1.2rem;
 }
 
 .list.one {
@@ -155,13 +155,13 @@ h1 {
 .voluntaria {
 	color: #000;
 	text-align: center;
-	font-size: 50px;
+	font-size: 3.3rem;
 	/*border: #000 2px dotted;*/
 	padding: 10px;
 }
 
 .grupo {
-	font-size: 18px;
+	font-size: 1.2rem;
 	/*border: #000 2px dotted;
 	padding: 5px;
 	margin-bottom: 5px;*/
