@@ -15,8 +15,8 @@ const expect = chai.expect;
 });
 */
 
-describe("😺Función 'Elegir voluntaria aleatoria'😺", () => {
-	
+describe("Función 'Elegir voluntaria aleatoria'", () => {
+
 	it("Parte 1. Elegir un número aleatorio entre 0 y 23", () => {
 
 		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
@@ -58,7 +58,7 @@ describe("😺Función 'Elegir voluntaria aleatoria'😺", () => {
 });
 
 
-describe("😺Función 'Crear grupos aleatorios'😺", () => {
+describe("Función 'Crear grupos aleatorios'", () => {
 
 
 	it("Parte 1. Cambiar el orden de nombres en array", () => {
@@ -76,7 +76,7 @@ describe("😺Función 'Crear grupos aleatorios'😺", () => {
 			result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
 		}
 
-		
+
 		expect(codersActive[0]).to.not.equal("Sara");
 		expect(codersActive[3]).to.not.equal("Tamara");
 		expect(codersActive[23]).to.not.equal("Marisa");
@@ -101,7 +101,7 @@ describe("😺Función 'Crear grupos aleatorios'😺", () => {
 		expect(result.length).to.equal(7);
 	})
 
-	it("Parte 2. Puedo elegir la cantidad de grupos y crear grupos aleatorios - 2", () => {
+	it("Parte 3. Puedo elegir la cantidad de grupos y crear grupos aleatorios - 2", () => {
 
 
 		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
