@@ -1,8 +1,8 @@
-function seleccionarCoder(listaDeCoders, position) {
+/*function seleccionarCoder(listaDeCoders, position) {
 	let elegida = listaDeCoders.splice(position, 1)[0];
 
 	return elegida;
-}
+}*/
 
 
 $(document).ready(function () {
@@ -52,7 +52,6 @@ $(document).ready(function () {
 		reiniciar();
 
 		codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
-
 		let parts = $('.select option:selected').text();
 		let result = [];
 		for (let i = parts; i > 0; i--) {

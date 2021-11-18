@@ -1,7 +1,7 @@
 const chai = window.chai;
 const expect = chai.expect;
 
-describe('Wheel of Doom', () => {
+/*describe('Wheel of Doom', () => {
 	it('puedo elegir candidatas aleatoriamente y las quito de la lista', () => {
 
 		let coders = ["Carmen", "Valentina", "Desi"];
@@ -13,26 +13,11 @@ describe('Wheel of Doom', () => {
 		expect(coders).to.have.same.members(["Carmen", "Desi"])
 	})
 });
+*/
 
-describe("😺Función 'Elegir voluntaria'😺", () => {
-	it("Parte 1. Array length es igual a 24", () => {
-
-
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
-
-		let codersActive = coders;
-
-		//let num = Math.floor(Math.random() * codersActive.length);
-		//let name = codersActive[num];
-
-
-		expect(codersActive.length).to.equal(24);
-		//expect(num >= 0 && num <= 23).to.equal(true);
-		//expect(typeof name === "string").to.equal(true);
-
-	});
-
-	it("Parte 2. Elegir un número aleatorio entre 0 y 23", () => {
+describe("😺Función 'Elegir voluntaria aleatoria'😺", () => {
+	
+	it("Parte 1. Elegir un número aleatorio entre 0 y 23", () => {
 
 		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
@@ -45,7 +30,7 @@ describe("😺Función 'Elegir voluntaria'😺", () => {
 	});
 
 
-	it("Parte 3. Retornar un nombre aleatorio del array", () => {
+	it("Parte 2. Retornar un nombre aleatorio del array", () => {
 
 		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
@@ -56,7 +41,7 @@ describe("😺Función 'Elegir voluntaria'😺", () => {
 		expect(typeof name === "string").to.equal(true);
 	});
 
-	it("Cortar un elemento del array", () => {
+	it("Parte 3. Cortar un elemento del array", () => {
 
 		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
@@ -73,54 +58,64 @@ describe("😺Función 'Elegir voluntaria'😺", () => {
 });
 
 
-describe("😺Función 'Crear grupos'😺", () => {
+describe("😺Función 'Crear grupos aleatorios'😺", () => {
 
 
-	it("No hay dos gatos iguales", () => {
+	it("Parte 1. Cambiar el orden de nombres en array", () => {
 
 
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+
+		let codersActive = coders;
+
+		codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
+
+		let parts = 7;
+		let result = [];
+		for (let i = parts; i > 0; i--) {
+			result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
+		}
+
+		
+		expect(codersActive[0]).to.not.equal("Sara");
+		expect(codersActive[3]).to.not.equal("Tamara");
+		expect(codersActive[23]).to.not.equal("Marisa");
+	})
 
 
-
-		expect(num).to.equal("Garfield");
-
-	});
-
-	it("Gatos haciendo cosas", () => {
+	it("Parte 2. Elegir la cantidad de grupos y crear grupos aleatorios - 1", () => {
 
 
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+
+		let codersActive = coders;
+
+		codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
+
+		let parts = 7;
+		let result = [];
+		for (let i = parts; i > 0; i--) {
+			result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
+		}
+
+		expect(result.length).to.equal(7);
+	})
+
+	it("Parte 2. Puedo elegir la cantidad de grupos y crear grupos aleatorios - 2", () => {
 
 
-		expect(num).to.equal("Garfield");
-	});
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
-	it("No hay dos gatos iguales", () => {
+		let codersActive = coders;
 
+		codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
 
+		let parts = 4;
+		let result = [];
+		for (let i = parts; i > 0; i--) {
+			result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
+		}
 
-
-
-		expect(num).to.equal("Garfield");
-
-	});
-
-	it("No hay dos gatos iguales", () => {
-
-
-
-
-
-		expect(num).to.equal("Garfield");
-
-	});
-
-	it("No hay dos gatos iguales", () => {
-
-
-
-
-
-		expect(num).to.equal("Garfield");
-
-	});
+		expect(result.length).to.equal(4);
+	})
 });
