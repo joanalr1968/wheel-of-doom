@@ -1,3 +1,10 @@
+function seleccionarCoder(listaDeCoders, position) {
+	let elegida = listaDeCoders.splice(position, 1)[0];
+
+	return elegida;
+}
+
+
 $(document).ready(function () {
 
 	let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
@@ -9,7 +16,7 @@ $(document).ready(function () {
 
 	/*----------------------------------------FUNCTION--ELEGIR-VOLUNTARIA---------------------------------------*/
 
-	function random() {
+	function elegirVoluntaria() {
 
 
 		if (codersActive.length >= 1) {
@@ -23,9 +30,8 @@ $(document).ready(function () {
 
 		else {
 			reiniciar()
-			random()
-		
-			//$('.answer').html("<p class='voluntaria'>Para elegir una voluntaria pulsa el botón de Reiniciar sesión</p>");
+			elegirVoluntaria()
+
 		}
 	};
 
@@ -43,12 +49,7 @@ $(document).ready(function () {
 
 	function crearGrupos() {
 
-		codersActive = ['Sara', 'Judith', 'Helen', 'Tamara', 'Candy', 'Laura Contreras', 'Gabrielle', 'Carmen', 'Yuliya', 'Anna Girona', 'Desirée', 'Sonia', 'Joana', 'Ana Casas', 'Alisa', 'Faby', 'Valentina', 'Laura Mayas', 'Rosa', 'Sandra', 'Kristina', 'Gràcia', 'Alexia', 'Marisa',];
-
-		$(".voluntaria").remove();
-		$(".grupo").remove();
-		$(".coder").show();
-
+		reiniciar();
 
 		codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
 
@@ -68,7 +69,7 @@ $(document).ready(function () {
 		$('.answer').append(`<p class="grupo">Grupo 8: ${result[7]}</p>`);
 		$('.answer').append(`<p class="grupo">Grupo 9: ${result[8]}</p>`);
 		$('.answer').append(`<p class="grupo">Grupo 10: ${result[9]}</p>`);
-		$('.answer').append(`<p class="grupo">Grupo 11: ${result[10]}</p>`)
+		$('.answer').append(`<p class="grupo">Grupo 11: ${result[10]}</p>`);
 		$('.answer').append(`<p class="grupo">Grupo 12: ${result[11]}</p>`);
 
 		$(".grupo:contains('" + undefined + "')").hide();
@@ -81,7 +82,7 @@ $(document).ready(function () {
 
 	$('#btn-start').on("click", function () {
 
-		random();
+		elegirVoluntaria();
 
 	})
 
