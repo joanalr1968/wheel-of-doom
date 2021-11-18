@@ -101,7 +101,7 @@ describe("Función 'Crear grupos aleatorios'", () => {
 		expect(result.length).to.equal(7);
 	})
 
-	it("Parte 3. Puedo elegir la cantidad de grupos y crear grupos aleatorios - 2", () => {
+	it("Parte 3. Elegir la cantidad de grupos y crear grupos aleatorios - 2", () => {
 
 
 		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
