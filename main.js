@@ -36,14 +36,7 @@ $(document).ready(function () {
 	};
 
 	/*-------------------------------------------FUNCTION--REINICIAR---------------------------------------*/
-	function reiniciar() {
-
-		$(".voluntaria").remove();
-		$(".grupo").remove();
-		$(".coder").show();
-
-		codersActive = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
-	};
+	
 
 	/*-------------------------------------------FUNCTION----CREAR-GRUPOS---------------------------------------*/
 
