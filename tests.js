@@ -4,14 +4,14 @@ const expect = chai.expect;
 describe("Función 'Elegir voluntaria aleatoria'", () => {
 	it('Elegir voluntaria aleatoriamente y quitarla de la lista', () => {
 
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 		let index = 22;
 
 		let coder = seleccionarCoder(coders, index);
 
 		expect(coder).to.equal("Alexia");
-		expect(coders).to.have.same.members(["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Marisa"]);
+		expect(coders).to.have.same.members(["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Marisa"]);
 	})
 });
 
@@ -22,7 +22,7 @@ describe("Función 'Crear grupos aleatorios'", () => {
 	it("Parte 1. Cambiar el orden de nombres en el array", () => {
 
 
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 		let arrayMezclado = mezclarArray(coders);
 
@@ -33,7 +33,7 @@ describe("Función 'Crear grupos aleatorios'", () => {
 
 
 	it("Parte 2. Elegir la cantidad de grupos y crear grupos aleatorios - 1", () => {
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 		let parts = 3;
 
@@ -47,7 +47,7 @@ describe("Función 'Crear grupos aleatorios'", () => {
 	})
 
 	it("Parte 3. Elegir la cantidad de grupos y crear grupos aleatorios - 2", () => {
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 		let parts = 5;
 
@@ -61,7 +61,7 @@ describe("Función 'Crear grupos aleatorios'", () => {
 	})
 
 	it("Parte 4. Elegir la cantidad de grupos y crear grupos aleatorios - 3", () => {
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 		let parts = 7;
 
@@ -75,7 +75,7 @@ describe("Función 'Crear grupos aleatorios'", () => {
 	})
 
 	it("Parte 5. Elegir la cantidad de grupos y crear grupos aleatorios - 4", () => {
-		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 		let parts = 11;
 

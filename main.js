@@ -23,7 +23,7 @@ function crearGrupos(codersActive, n, arrayConResultados) {
 
 $(document).ready(function () {
 
-	let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+	let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 	let codersActive = coders;
 
@@ -56,7 +56,7 @@ $(document).ready(function () {
 		$(".grupo").remove();
 		$(".coder").show();
 
-		codersActive = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
+		codersActive = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 	};
 
 	/*-------------------------------------------FUNCTION----CREAR-GRUPOS---------------------------------------*/

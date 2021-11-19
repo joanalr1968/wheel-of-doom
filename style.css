@@ -39,7 +39,6 @@ h1 {
 
 .buttons {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center; /*new*/
 	gap: 100px; /*new*/
 	align-items: center;
@@ -168,17 +167,23 @@ h1 {
 	margin-bottom: 5px;*/
 }
 
-@media (max-width:650px){
-	body{
-		display:flex;
+@media (max-width: 650px) {
+	body {
+		display: flex;
 		flex-wrap: wrap;
 	}
-	.list-content{
-		display:flex;
+	.list-content {
+		display: flex;
 		flex-wrap: wrap;
-	}   
-	.buttons-image-container{
-		display:flex;
+	}
+	.buttons-image-container {
+		display: flex;
 		flex-wrap: wrap;
-	}   
+	}
+}
+
+@media (max-width: 1024px) {
+	.buttons {
+		flex-wrap: wrap;
+	}
 }
