@@ -1,17 +1,31 @@
-/*function seleccionarCoder(listaDeCoders, position) {
-	let elegida = listaDeCoders.splice(position, 1)[0];
+function seleccionarCoder(codersActive, num) {
+	let name = codersActive[num];
+	codersActive.splice(num, 1);
 
-	return elegida;
-}*/
+	return name;
+}
 
+function mezclarArray(codersActive) {
+	codersActive = codersActive.map(i => [Math.random(), i]).sort().map(i => i[1]);
+	return codersActive;
+}
+
+function crearGrupos(codersActive, n, arrayConResultados) {
+
+	mezclarArray(codersActive);
+	let parts = n;
+	let result = arrayConResultados;
+	for (let i = parts; i > 0; i--) {
+		result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
+	}
+	//return result;
+}
 
 $(document).ready(function () {
 
 	let coders = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura Contreras", "Gabrielle", "Carmen", "Yuliya", "Anna Girona", "Desirée", "Sonia", "Joana", "Ana Casas", "Alisa", "Faby", "Valentina", "Laura Mayas", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 
 	let codersActive = coders;
-
-
 
 
 	/*----------------------------------------FUNCTION--ELEGIR-VOLUNTARIA---------------------------------------*/
