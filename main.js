@@ -1,3 +1,5 @@
+/*-----------------TESTS----------------------------------*/
+
 function seleccionarCoder(codersActive, num) {
 	let name = codersActive[num];
 	codersActive.splice(num, 1);
@@ -18,8 +20,10 @@ function crearGrupos(codersActive, n, arrayConResultados) {
 	for (let i = parts; i > 0; i--) {
 		result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
 	}
-	//return result;
+
 }
+
+/*---------------------MAIN----------------------------------*/
 
 $(document).ready(function () {
 
@@ -28,7 +32,7 @@ $(document).ready(function () {
 	let codersActive = coders;
 
 
-	/*----------------------------------------FUNCTION--ELEGIR-VOLUNTARIA---------------------------------------*/
+	/*------------------------------------FUNCTION--ELEGIR-VOLUNTARIA-----------------------------------*/
 
 	function elegirVoluntaria() {
 
@@ -49,7 +53,7 @@ $(document).ready(function () {
 		}
 	};
 
-	/*-------------------------------------------FUNCTION--REINICIAR---------------------------------------*/
+	/*-----------------------------------------FUNCTION--REINICIAR-------------------------------------*/
 	function reiniciar() {
 
 		$(".voluntaria").remove();
@@ -59,7 +63,7 @@ $(document).ready(function () {
 		codersActive = ["Sara", "Judith", "Helen", "Tamara", "Candy", "Laura C.", "Gabrielle", "Carmen", "Yuliya", "Anna G.", "Desirée", "Sonia", "Joana", "Ana C.", "Alisa", "Faby", "Valentina", "Laura M.", "Rosa", "Sandra", "Kristina", "Gràcia", "Alexia", "Marisa"];
 	};
 
-	/*-------------------------------------------FUNCTION----CREAR-GRUPOS---------------------------------------*/
+	/*----------------------------------------FUNCTION----CREAR-GRUPOS----------------------------------*/
 
 	function crearGrupos() {
 
@@ -72,27 +76,15 @@ $(document).ready(function () {
 			result.push(codersActive.splice(0, Math.ceil(codersActive.length / i)).join(', '));
 		}
 
-		$('.answer').append(
-			`<p class="grupo">Grupo 1: ${result[0]}</p>`,
-			`<p class="grupo">Grupo 2: ${result[1]}</p>`,
-			`<p class="grupo">Grupo 3: ${result[2]}</p>`,
-			`<p class="grupo">Grupo 4: ${result[3]}</p>`,
-			`<p class="grupo">Grupo 5: ${result[4]}</p>`,
-			`<p class="grupo">Grupo 6: ${result[5]}</p>`,
-			`<p class="grupo">Grupo 7: ${result[6]}</p>`,
-			`<p class="grupo">Grupo 8: ${result[7]}</p>`,
-			`<p class="grupo">Grupo 9: ${result[8]}</p>`,
-			`<p class="grupo">Grupo 10: ${result[9]}</p>`,
-			`<p class="grupo">Grupo 11: ${result[10]}</p>`,
-			`<p class="grupo">Grupo 12: ${result[11]}</p>`);
-
-		$(".grupo:contains('" + undefined + "')").hide();
+		for (i = 0; i < result.length; i++) {
+			$('.answer').append(`<p class="grupo">Grupo ${i + 1}: ${result[i]}</p>`);
+		}
 	};
 
 
 
 
-	/*-----------------------------------------ElEGIR VOLUNTARIA---------------------------------------------*/
+	/*--------------------------------------ElEGIR VOLUNTARIA------------------------------------------*/
 
 	$('#btn-start').on("click", function () {
 
@@ -107,7 +99,7 @@ $(document).ready(function () {
 
 	});
 
-	/*-----------------------------------------CREAR-GRUPOS---------------------------------------------*/
+	/*-----------------------------------------CREAR-GRUPOS-------------------------------------------*/
 
 	$('#btn-grupos').on("click", function () {
 
